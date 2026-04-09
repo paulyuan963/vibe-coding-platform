@@ -311,7 +311,6 @@ export async function POST(req: Request) {
       model: openai('gpt-4.1-mini'),
       system: `${BASE_SYSTEM_PROMPT}\n\n${modePrompt}\n\n${marketContext}`,
       messages: await convertToModelMessages(messages),
-      maxSteps: 1,
       temperature: 0.4,
     });
 
